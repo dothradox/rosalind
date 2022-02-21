@@ -5,16 +5,16 @@ map = {
     "UUA": "L",
     "UUG": "L",
     "UCU": "S",
-    "UCC": "s",
+    "UCC": "S",
     "UCA": "S",
     "UCG": "S",
     "UAU": "Y",
     "UAC": "Y",
-    "UAA": "_",
-    "UAG": "_",
+    "UAA": "",
+    "UAG": "",
     "UGU": "C",
     "UGC": "C",
-    "UGA": "_",
+    "UGA": "",
     "UGG": "W",
     "CUU": "L",
     "CUC": "L",
@@ -69,9 +69,13 @@ map = {
 f = open("rosalind_prot.txt", "r")
 file_content = f.read()
 
+g = open("answer.txt", "w")
 i = 0
 while True:
     print(map[file_content[i : i + 3]], end="")
-    i = i + 3
-    if (i + 3) > len(file_content):
+    g.write(map[file_content[i : i + 3]])
+    if map[file_content[i : i + 3]] == "":
         break
+    i = i + 3
+f.close()
+g.close()
