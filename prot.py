@@ -67,7 +67,7 @@ map = {
 }
 
 f = open("rosalind_prot.txt", "r")
-file_content = f.read()
+file_content = f.read().strip()
 
 g = open("answer.txt", "w")
 i = 0

@@ -20,11 +20,13 @@ protein_to_possible_rna_dict = {
     "E": 2,
     "G": 4,
 }
+
 stop_codons = ["UGA", "UAA", "UAG"]
 no_of_stop_codons = len(stop_codons)
+
 f = open("rosalind_mrna.txt", "r")
-file_content = f.read()
-print(file_content)
+file_content = f.read().strip()
+
 value = 1
 for amino_acid in file_content:
     value = value * protein_to_possible_rna_dict[amino_acid]

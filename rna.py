@@ -2,7 +2,7 @@
 u = ""
 
 f = open("rosalind_rna.txt", "r")
-file_content = f.read()
+file_content = f.read().strip()
 
 for i in range(len(file_content)):
     if file_content[i] == "T":

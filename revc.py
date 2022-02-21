@@ -4,7 +4,7 @@
 new_string = ""
 
 f = open("rosalind_revc.txt", "r")
-file_content = f.read()
+file_content = f.read().strip()
 reverse = file_content[::-1]
 
 for i in range(len(reverse)):
