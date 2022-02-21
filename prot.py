@@ -10,11 +10,11 @@ map = {
     "UCG": "S",
     "UAU": "Y",
     "UAC": "Y",
-    "UAA": "STOP",
-    "UAG": "STOP",
+    "UAA": "_",
+    "UAG": "_",
     "UGU": "C",
     "UGC": "C",
-    "UGA": "STOP",
+    "UGA": "_",
     "UGG": "W",
     "CUU": "L",
     "CUC": "L",
@@ -69,7 +69,6 @@ map = {
 f = open("rosalind_prot.txt", "r")
 file_content = f.read()
 
-print(len(file_content))
 i = 0
 while True:
     print(map[file_content[i : i + 3]], end="")
